@@ -7,7 +7,7 @@ As a data analyst, my primary focus is on extracting insights from data to suppo
 * Python:I leverage libraries like Pandas,NumPy,and Matplotlib to handle data manipulation,perform statistical analysis,and create informative visualizations.
 
 * SQL:proficient in writing complex SQL queries to extract,filter,and aggregate data from relational databases, enabling me to uncover valuable insights and patterns.
-- 🛠️**Tools**: Power BI is my preferred tool for creating interactive dashboards and reports.
+- 🛠️**Tools**: Power BI,Python & Cognos
 - 👷‍♀️**Workflow**:My workflow typically involves:
   
   - Data Collection:Gathering data from various sources, including databases, APIs, and flat files.
