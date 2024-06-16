@@ -83,7 +83,7 @@ As a data analyst, my primary focus is on extracting insights from data to suppo
 
   - Made a Dashboard of Demographcis
 
-    ### [Building a Dashboard using SQL& Power BI)
+    ### [Building a Dashboard using SQL& Power BI](https://github.com/lbaraza/SQL-Power-BI)
 
 # Toman Bike Share Analysis
 
