@@ -112,9 +112,9 @@ As a data analyst,the focus was on examining current and historical data to prov
 ## Data Sources
 You can access the datasets through the following links:
 
-https://github.com/lbaraza/SQL-Power-BI/blob/main/bike_share_yr_0.csv
-https://github.com/lbaraza/SQL-Power-BI/blob/main/bike_share_yr_1.csv
-https://github.com/lbaraza/SQL-Power-BI/blob/main/cost_table.csv
+-  https://github.com/lbaraza/SQL-Power-BI/blob/main/bike_share_yr_0.csv
+-  https://github.com/lbaraza/SQL-Power-BI/blob/main/bike_share_yr_1.csv
+-  https://github.com/lbaraza/SQL-Power-BI/blob/main/cost_table.csv
 
 ## Usage
 
