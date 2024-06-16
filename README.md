@@ -99,21 +99,22 @@ As a data analyst,the focus was on examining current and historical data to prov
 
 ## Objectives
 
-1. Analyze current and historical usage data.
-2. Identify trends and patterns in bike usage.
-3. Assess the impact of current pricing on demand.  
-4. Provide data-driven recommendations for potential price changes.
+1. Hourly revenue Analysis.
+2. Profit and revenue trends.
+3. Seasonal Revenue.  
+4. Rider demographics.
+5. Provide recommendations on raising prices next year.
 
 ## Key Findings
-
-- Detailed analysis of peak usage times, customer demographics, and revenue streams.
-- Visualization of trends showing usage patterns.
-- Insights into customer sensitivity to pricing changes.
+-  Conservative Increase: Considering the substantial increase last year,a more conservative increase might be prudent to avoid hitting a price ceiling where demand starts to drop.An increase in the range of 10-15% could test the market's response without risking a significant loss of customers.
+-  Price Setting: If the price in 2022 was $4.99,a 10% increase would make the new price about $5.49, while a 15% increase would set the price at approximately $5.74.
 
 ## Data Sources
+You can access the datasets through the following links:
 
-- Toman Bike Share usage data (e.g., trip records, customer information).
-- Financial data including revenue and costs.
+https://github.com/lbaraza/SQL-Power-BI/blob/main/bike_share_yr_0.csv
+https://github.com/lbaraza/SQL-Power-BI/blob/main/bike_share_yr_1.csv
+https://github.com/lbaraza/SQL-Power-BI/blob/main/cost_table.csv
 
 ## Usage
 
@@ -125,16 +126,28 @@ As a data analyst,the focus was on examining current and historical data to prov
 The analysis provides a comprehensive overview of Toman Bike Share's current performance and 
 supports informed decision-making regarding potential price adjustments.
 
-## Repository Structure
+## SQL Code
 
-```plaintext
-├── sql
-│   ├── data_extraction.sql
-│   ├── data_transformation.sql
-├── powerbi
-│   ├── dashboard.pbix
-├── README.md
-```
+with cte as (
+select * from bike_share_yr_0
+union all
+select * from bike_share_yr_1)
+
+select
+dteday,
+season,
+a.yr,
+weekday,
+hr,
+rider_type,
+riders,
+price,
+COGS,
+riders * price as revenue,
+riders * price - COGS as profit
+from cte a
+left join cost_table b
+on a.yr = b.yr
   
 
 
