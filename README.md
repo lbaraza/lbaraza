@@ -23,7 +23,7 @@ As a data analyst, my primary focus is on extracting insights from data to suppo
   - Reporting:Presenting findings to stakeholders through reports, presentations, or interactive dashboards.
   
 - 💞️ I’m looking to collaborate on teamwork and effective communication.I'm also open to feedback and continually strive to improve my analytical skills and deliver impactful insights.
-- 📫 How to reach me via email at louisebaraza12@gmail.com.I'm excited to explore data-driven solutions together!
+  
 
   ## 🚀 Current Focus
   - 🌱 I'm currently learning and exploring Tableau for data visualization and analysis.Excited to leverage its capabilities to enhance storytelling and create compelling visualizations.
