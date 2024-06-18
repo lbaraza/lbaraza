@@ -128,28 +128,41 @@ supports informed decision-making regarding potential price adjustments.
 
 ## SQL Code
 
+```sql
+WITH cte AS (
+    SELECT * FROM bike_share_yr_0
+    UNION ALL
+    SELECT * FROM bike_share_yr_1
+)
 
-with cte as (
-select * from bike_share_yr_0
-union all
-select * from bike_share_yr_1)
+SELECT 
+    dteday, 
+    season, 
+    a.yr, 
+    weekday, 
+    hr, 
+    rider_type, 
+    riders, 
+    price, 
+    COGS, 
+    riders * price AS revenue, 
+    (riders * price) - COGS AS profit 
+FROM 
+    cte a 
+LEFT JOIN 
+    cost_table b 
+ON 
+    a.yr = b.yr;
+```
+
+### Explanation
+
+- **CTE (Common Table Expression)**: Combines data from two tables (`bike_share_yr_0` and `bike_share_yr_1`) using `UNION ALL`.
+- **Main Query**: Selects relevant columns from the combined data (`cte`) and joins with the `cost_table` on the `yr` column.
+- **Calculations**: Computes revenue as `riders * price` and profit as `(riders * price) - COGS`.
 
 
-select
-dteday,
-season,
-a.yr,
-weekday,
-hr,
-rider_type,
-riders,
-price,
-COGS,
-riders*price as revenue,
-riders*price -COGS as profit
-from cte a
-left join cost_table b
-on a.yr =b.yr
+
 
 
     
